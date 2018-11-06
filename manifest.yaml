@@ -1,0 +1,13 @@
+applications:
+- name: hello-client
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  routes:
+  - route: hello-client.apps.pcfone.io
+  services:
+  - service-registry
+  - config-server
+  - circuit-breaker
+  stack: cflinuxfs2
+  path: target/hello-client-0.0.1-SNAPSHOT.jar
